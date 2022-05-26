@@ -18,10 +18,8 @@ function App() {
         <Route exact path="/" component={HomePageWithRedirect} />
         <Route path="/about" component={AboutPage} />
         {/* <Route path="/projects" component={ProjectsPage} /> */}
-
         <Route
-          exact
-          path="/projects"
+          exact path="/projects"
           render={(routeProps) => {
             return <ProjectsPage {...routeProps} projects={projectsData} />;
           }}
@@ -29,6 +27,23 @@ function App() {
 
         <Route component={ErrorPage} />
       </Switch>
+
+      {/*
+      <Routes>
+        {/* <Route  path="/" element={ <HomePage /> } /> 
+
+        <Route path="/" element={ <HomePageWithNavigate /> } />
+        <Route path="/about" element={ <AboutPage /> } />
+        
+        <Route
+          path="/projects"
+          element={ <ProjectsPage projects={projectsData} /> }
+        />
+
+        <Route path="*" element={ <ErrorPage /> } />
+      </Routes>
+      */}
+      
     </div>
   );
 }
